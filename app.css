@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 15pt;
+    font-family: 'Source Sans Pro', sans serif;
+    background-color: #607D8B;
+    background: linear-gradient(rgba(52, 73, 94, 0.5), rgba(52, 73, 94, 0.5)), url("https://www.googledrive.com/host/0B3dz2HnAli8vUnJtZ1hDa21pV0U");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.brand-logo {
+    margin-left: 20px;
+}
+
+.fleft {
+    float: left;
+}
+
+.side-nav a {
+    font-size: 1.2em;
+}
+
+.side-nav i {
+    margin-right: 5px;
+}
+
+.headernav {
+    background-color: gray;
+    width: 100%;
+    height: 200px;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    min-height: 30em;
+    padding: 7.5em 0 2em 0;
+}
+
+#nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0 1em 0;
+    z-index: 1;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 200;
+    /*background: rgba(0, 0, 0, 0.3);*/
+}
+
+#nav > ul {
+    line-height: 0px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    height: 21px;
+    border-left: solid 1px rgba(192, 192, 192, 0.35);
+    border-right: solid 1px rgba(192, 192, 192, 0.35);
+    list-style: none;
+}
+
+#nav > ul:before,
+#nav > ul:after {
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    height: 5px;
+    border-top: solid 1px rgba(192, 192, 192, 0.5);
+    border-bottom: solid 1px rgba(192, 192, 192, 0.5);
+}
+
+#nav > ul:before {
+    left: 100%;
+    margin-left: 1px;
+}
+
+#nav > ul:after {
+    right: 100%;
+    margin-right: 1px;
+}
+
+#nav > ul > li {
+    white-space: nowrap;
+    display: inline-block;
+    margin: -9px 0.5em 0 0.5em;
+    border-radius: 0.1em;
+    padding: 0.85em;
+    border: solid 1px transparent;
+    transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+    border: 1px solid transparent;
+}
+
+#nav > ul > li:hover {
+    border: 1px solid rgba(192, 192, 192, 0.8);
+}
+
+#nav > ul > li > a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+}
+
+#header .inner {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+header {
+    display: inline-block;
+    margin: 0 0 1em 0;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 4em;
+    color: #fff;
+    line-height: 1em;
+    vertical-align: middle;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+header hr {
+    clear: both;
+    width: 80%;
+    margin: 5px auto;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+header > p {
+    padding-top: 20px;
+    font-size: 1.25em;
+    margin: 0;
+    display: block;
+    text-align: inherit;
+    font-weight: 200;
+    color: #fff;
+}
+
+.posskew {
+    transform: skewY(3deg);
+}
+
+.negskew {
+    transform: skewY(-3deg);
+}
+
+section {
+    background: #F2F3F8;
+    text-align: center;
+    padding: 4.5em 0 4.5em 0;
+    margin-bottom: 7em;
+}
+
+section h2 {
+    font-size: 2.85em;
+    font-weight: 400;
+    color: #2F4156;
+    line-height: 1.25em;
+}
+
+section p {
+    font-size: 1.2em;
+    padding: 0 4em;
+    font-weight: 300;
+}
+
+.workstuff {
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Cards taken from http://www.materialup.com/posts/modern-product-cards-design/responsive */
+
+.card {
+    display: block;
+    margin: 0 1em;
+    margin-bottom: 30px;
+    height: 280px;
+    background: #fff;
+    box-shadoow: 0 2px 2.5px #aaa;
+    overflow;
+    hidden;
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.card .product-img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.card .content {
+    display: block;
+    position: relative;
+    height: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+
+.card .content .color {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 76%;
+    height: 100%;
+    color: #fff;
+    -webkit-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.card .content .dark {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 76%;
+    height: 100%;
+    background: #2c3e50;
+    -webkit-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.card .content.green .color {
+    background: #27ae60;
+}
+
+.card .content.red .color {
+    background: #c0392b;
+}
+
+.card .content.blue .color {
+    background: #2980b9;
+}
+
+.card .content.yellow .color {
+    background: #f39c12;
+}
+
+.card .content .product-details {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    color: #fff;
+    width: 100%;
+}
+
+.card .content .product-details span.product-name {
+    display: block;
+    font-weight: 300;
+    text-align: start;
+}
+
+.card .content .product-details span.product-description {
+    display: block;
+    margin-top: 5px;
+    width: 68%;
+    height: auto;
+    font-weight: 300;
+    font-size: 13px;
+    text-align: start;
+}
+
+.card .content span.price {
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 22%;
+    height: auto;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.card .content.green button.buy {
+    background: rgba(39, 174, 96, 1);
+}
+
+.card .content.green button.buy:hover {
+    background: rgba(39, 174, 96, 0.7);
+}
+
+.card .content.red button.buy {
+    background: rgba(192, 57, 43, 1);
+}
+
+.card .content.red button.buy:hover {
+    background: rgba(192, 57, 43, 0.7);
+}
+
+.card .content.blue button.buy {
+    background: rgba(41, 128, 185, 1);
+}
+
+.card .content.blue button.buy:hover {
+    background: rgba(41, 128, 185, 0.7);
+}
+
+.card .content.yellow button.buy {
+    background: rgba(243, 156, 18, 1);
+}
+
+.card .content.yellow button.buy:hover {
+    background: rgba(243, 156, 18, 0.7);
+}
+
+.card .content button.buy {
+    display: block;
+    padding: 4px 6px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 22%;
+    height: auto;
+    font-size: 12px;
+    font-weight: 300;
+    border: none;
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+footer {
+    width: 100%;
+    background: #2F4156;
+    margin-top: 1em;
+}
+
+footer .sociallist {
+    margin: 0.3em;
+    text-align: center;
+}
+
+footer .sociallist ul {
+    position: relative;
+    background: rgba(128, 128, 128, 0.05);
+    border-radius: 4em;
+    display: inline-block;
+    font-size: 1.25em;
+    padding: 0;
+}
+
+footer .sociallist li {
+    display: inline-block;
+}
+
+footer .sociallist li a {
+    display: inline-block;
+    background: none;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    border-radius: 100%;
+    border: 0;
+    text-decoration: none;
+    color: white;
+    transition: 0.35s ease-in-out;
+}
+
+footer .sociallist li a:hover {
+    color: rgb(118, 131, 239);
+}
+
+footer .copyright {
+    text-align: center;
+    color: rgba(200, 200, 200, 0.5);
+    font-size: 0.8em;
+    padding: 0.1em;
+    background: #273749;
+}
+
+footer .copyright a {
+    color: rgba(150, 190, 200, 0.5);
+    text-decoration: none;
+    transition: 0.35s ease-in-out;
+}
+
+footer .copyright a:hover {
+    color: rgba(150, 190, 220, 0.9);
+}
+
+.fa {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fab {
+    position: absolute;
+
+}
