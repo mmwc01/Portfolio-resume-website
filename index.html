@@ -18,9 +18,31 @@
      background-attachment: fixed;
      color: white;
  }
+  .bottomRight {
+  font-family:calibri;
+  font-size:15px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+.btn {
+  border: none;
+  border-radius: 100%;
+  color: dimgrey;
+  padding: 12px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn2 {
+  border: none;
+  background:transparent;
+  color: white; /*changed to white for easy viewing. Otherwise would be dimgrey*/
+  padding: 0px, 0px;
+  cursor: pointer;
+     }
+  
  *.icon-white {color: white}
  .opacity,.hover-opacity:hover{opacity:0.60}.opacity-off,.hover-opacity-off:hover{opacity:1}
-/* DEMO-SPECIFIC STYLES */
 .typewriter h1 {
   color: #fff;
   font-family: 'Raleway', sans serif;
@@ -32,13 +54,11 @@
     blink-caret .5s step-end infinite;
 }
 
-/* The typing effect */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: transparent }
@@ -106,12 +126,24 @@ var TxtType = function(el, toRotate, period) {
               new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-        // INJECT CSS
+
         var css = document.createElement("style");
         css.type = "text/css";
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
     };
+  
+  /*functionality for disappearance of initial buttons, and display of audio component sized based on screen size (mobile or desktop)*/
+  function showAud() {
+  document.getElementById("audioButton").style.display = "none";
+    if(window.innerWidth < 480) {
+         document.getElementById("audioShowMobile").style.display = "block";
+       } else {
+          document.getElementById("audioShow").style.display = "block";
+       }
+  document.getElementById("audioClip").play();
+  }
+  
 </script>
 
 <h1>
@@ -119,5 +151,24 @@ var TxtType = function(el, toRotate, period) {
     <span class="wrap"></span>
   </a>
 </h1>
+  
+/*desktop html audio component with default size*/  
+<div id="audioShow" style="display:none;" class="bottomRight">
+<audio id="audioClip" controls>
+  <source src="https://s3.amazonaws.com/mobile.engineering.com/audio/19559.mp3" type="audio/mpeg">
+</audio>
+  </div>
+  
+/*mobile html audio component limited to 250 px*/   
+<div id="audioShowMobile" style="display:none;" class="bottomRight">
+<audio id="audioClip" controls style="width:250px">
+  <source src="https://s3.amazonaws.com/mobile.engineering.com/audio/19559.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+ /*listen to story buttons*/ 
+ <div id="audioButton" class="bottomRight">
+   <button class="btn" type="round-button" onclick="showAud()"><i class="fa fa-play"></i></button>  <button class="btn2">LISTEN TO STORY</button>
+  </div>
 
 </html>
