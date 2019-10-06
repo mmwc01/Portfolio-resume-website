@@ -39,7 +39,7 @@
   color: white; /*changed to white for easy viewing. Otherwise would be dimgrey*/
   padding: 0px, 0px;
   cursor: pointer;
-     }
+}
   
  *.icon-white {color: white}
  .opacity,.hover-opacity:hover{opacity:0.60}.opacity-off,.hover-opacity-off:hover{opacity:1}
@@ -137,11 +137,12 @@ var TxtType = function(el, toRotate, period) {
   function showAud() {
   document.getElementById("audioButton").style.display = "none";
     if(window.innerWidth < 480) {
-         document.getElementById("audioShowMobile").style.display = "block";
-       } else {
-          document.getElementById("audioShow").style.display = "block";
-       }
-  document.getElementById("audioClip").play();
+      document.getElementById("audioShowMobile").style.display = "block";
+      document.getElementById("audioClipMobile").play();
+    } else {
+      document.getElementById("audioShow").style.display = "block";
+      document.getElementById("audioClip").play();
+    }
   }
 </script>
 
@@ -160,7 +161,7 @@ var TxtType = function(el, toRotate, period) {
   
 <!--mobile html audio component limited to 250 px-->   
 <div id="audioShowMobile" style="display:none;" class="bottomRight">
-<audio id="audioClip" controls style="width:250px">
+<audio id="audioClipMobile" controls style="width:250px">
   <source src="https://s3.amazonaws.com/mobile.engineering.com/audio/19559.mp3" type="audio/mpeg">
 </audio>
 </div>
@@ -168,6 +169,6 @@ var TxtType = function(el, toRotate, period) {
  <!--listen to story buttons-->
  <div id="audioButton" class="bottomRight">
    <button class="btn" type="round-button" onclick="showAud()"><i class="fa fa-play"></i></button>  <button class="btn2" onclick="showAud()">LISTEN TO STORY</button>
-  </div>
+ </div>
 
 </html>
